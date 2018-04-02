@@ -2,8 +2,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.Statement;
-
-//package database_connection;
+import java.lang.Class;
+import java.sql.*;
+import java.math.*;
 
 public class DBConnect
 {
@@ -12,6 +13,29 @@ public class DBConnect
         m_host = host;
         m_username = username;
         m_password = password;
+    }
+
+    // Input:
+    //      String procedureName - name of stored procedure to be used (under
+    //                          the Programmability\Stored Procedures dir in database)
+    //                          NOTE: You DO NOT need to specify the particular database,
+    //                              that's already done below (see assignment of procedureCall)
+    //      String args - arguments to pass to the stored procedure
+    //
+    //      Example use: dbConnect.ExecuteStoredProcedure("add_request_review", "3,0,'please review'");
+    //
+    //      Above example taken from line 18 of workflow.sql
+    public void ExecuteStoredProcedure(String procedureName, String args) {
+        try
+        {
+            Statement stmt = m_connection.createStatement();
+            String procedureCall = "exec [Reporting_developer].[work]." + procedureName + " " + args + ";";
+            stmt.executeUpdate(procedureCall);
+        }
+        catch (SQLException err)
+        {
+            System.out.println(err.getMessage());
+        }
     }
 
     // Input:
@@ -24,8 +48,8 @@ public class DBConnect
         try
         {
             Statement stmt = m_connection.createStatement();
-            String insertStatement = "INSERT INTO " + table + columns + " VALUES " + values;
-            stmt.executeQuery(insertStatement);
+            String insertStatement = "INSERT INTO " + table + " " +  columns + " VALUES " + values + ";";
+            stmt.executeUpdate(insertStatement);
         }
         catch (SQLException err)
         {
@@ -39,7 +63,15 @@ public class DBConnect
     {
         try
         {
-            m_connection = DriverManager.getConnection(m_host, m_username, m_password);
+            // Init SQL Server driver for connection
+            Driver sqlDriver = new com.microsoft.sqlserver.jdbc.SQLServerDriver();
+            DriverManager.registerDriver(sqlDriver);
+
+            // Create connection URL based on user input
+            String connectionURL = "jdbc:sqlserver://" + m_host + ";databaseName=Reporting_developer;" + "user=" +
+                    m_username + ";password=" + m_password + ";";
+            m_connection = DriverManager.getConnection(connectionURL);
+            System.out.println("Connection Success!\n");
         }
         catch (SQLException err)
         {

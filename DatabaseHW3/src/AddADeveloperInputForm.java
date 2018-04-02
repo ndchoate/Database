@@ -6,4 +6,23 @@ public class AddADeveloperInputForm {
     private JTextField textField3;
     private JButton okButton;
     private JButton cancelButton;
+    private JPanel topJPanel;
+
+    public AddADeveloperInputForm() {
+        // Launch the form
+        JFrame frame = new JFrame("ConnectForm");
+        frame.setContentPane(this.topJPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("AddADeveloperInputForm");
+        frame.setContentPane(new AddADeveloperInputForm().topJPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
 }
