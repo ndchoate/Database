@@ -54,7 +54,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="282">
               <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1522626533970" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1522626533970" expanded="false" signature="113:298" ph="..." />
+                <marker date="1522626533970" expanded="true" signature="516:623" ph="{...}" />
+                <marker date="1522626533970" expanded="true" signature="699:1041" ph="{...}" />
+                <marker date="1522626533970" expanded="true" signature="1120:1461" ph="{...}" />
+                <marker date="1522626533970" expanded="true" signature="1489:2021" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,18 +153,6 @@
               <item name="DatabaseHW3" type="b2602c69:ProjectViewProjectNode" />
               <item name="DatabaseHW3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DatabaseHW3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DatabaseHW3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AssignedInputForm" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="DatabaseHW3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DatabaseHW3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ConnectForm" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="DatabaseHW3" type="b2602c69:ProjectViewProjectNode" />
@@ -751,7 +746,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1522626533970" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1522626533970" expanded="false" signature="113:298" ph="..." />
+            <marker date="1522626533970" expanded="true" signature="516:623" ph="{...}" />
+            <marker date="1522626533970" expanded="true" signature="699:1041" ph="{...}" />
+            <marker date="1522626533970" expanded="true" signature="1120:1461" ph="{...}" />
+            <marker date="1522626533970" expanded="true" signature="1489:2021" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
